@@ -1,0 +1,34 @@
+const Role = require('../Model/RoleModel')
+const response = require('../Utils/Responses')
+const consts = require ('../Utils/constants')
+module.exports.addRole = async (req, res)=>{
+   // const role = new Role(req.body)
+    try{
+     const role = await Role.create(req.body)
+     console.log(role)
+     if(role){
+        console.log("success")
+        res.json(
+            response.succesResponse(
+                "POST",
+                role, 
+                "ROLE CREATED"
+            )
+
+        )
+     }
+     else 
+     {
+        res.json(
+            response.failureResponse(consts.NOT_FOUND,"NOT FOUND"))
+     } 
+    }
+    
+     catch(err){
+        res.status(500).json({
+            message:err
+        })}
+     
+    }
+
+   

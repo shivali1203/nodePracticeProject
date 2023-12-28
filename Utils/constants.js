@@ -1,0 +1,21 @@
+const errorType={
+    NOT_FOUND: "NOT_FOUND",//404
+    NOT_AUTHORIZED: "NOT_AUTHORIZED",//401
+    NOT_AUTHENTICATED: "NOT_AUTHENTICATED",
+    NOT_VALID: "NOT_VALID",
+    NOT_UNIQUE: "NOT_UNIQUE",
+    NOT_ALLOWED: "NOT_ALLOWED",//forbidden 403
+    NOT_ACCEPTABLE: "NOT_ACCEPTABLE",//
+    NOT_IMPLEMENTED: "NOT_IMPLEMENTED",
+    NOT_AVAILABLE: "NOT_AVAILABLE",
+    NOT_SUPPORTED: "NOT_SUPPORTED",
+    NOT_DEFINED: "NOT_DEFINED",
+    NOT_ALLOWED: "NOT_ALLOWED",
+    INTERNAL_SERVER_ERROR: "INTERNAL_SERVER_ERROR",//500
+    BAD_REQUEST: "BAD_REQUEST",//401
+    NOT_MODIFIED : "NOT MODIFIED"//304
+//300 mutliple choices, 301 moved permenantly - can be used in delete , 304 - not modified used with put api
+
+} 
+
+module.exports= errorType
